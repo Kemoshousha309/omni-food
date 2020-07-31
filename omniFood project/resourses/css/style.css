@@ -1,0 +1,688 @@
+/* notes */
+
+/*
+
+orange color => #e67e22
+
+*/
+
+/* -------------------------------------------------------------- */
+/********************** BASIC SETUP  *****************************/   
+/* -------------------------------------------------------------- */
+/* preset the all properties */
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* define the general properties */
+html{
+    background-color: #fff; /* jsut set it */
+    color: #555;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: "lato", "Arial", sans-serif; /* make the substitutions*/
+    text-rendering: optimizeLegibility;  /* this property to decide the proirity during rendering legibility or speed view of content */
+}
+
+/* we will put almost of our content in row classes so here we give it some certain rules (centered) */
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* -------------------------------------------------------------- */
+/********************** HEADER SETUP  *****************************/   
+/* -------------------------------------------------------------- */
+
+header{
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 0, 0, 0.7)), to(rgb(0, 0, 0, 0.7))), url(images/hero.jpg);
+    background-image: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)), url(images/hero.jpg); /* the fourth input in the rbga is                                                                                                           the opacity */
+    background-size: cover;  /* thes two properties to optimize the back ground image */
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh; /* to occupy 100% of viewport hight */
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.hero-text-box{
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* this property to move the element and other usages , translate => Defines a 2D translation.
+                                         from the new position we can move hirzontaly and vertically by this function*/
+}
+
+
+/* -------------------------------------------------------------- */
+/********************** NAV BAR & LOGO  ***************************/   
+/* -------------------------------------------------------------- */
+
+.logo-img{
+    height: 100px;
+    float: left;
+    margin: 20px 0 0 100px;
+    
+}
+
+.nav-bar{
+    float: right;
+    margin: 45px 50px 0 0;
+}
+.nav-bar li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 50px 0 0;
+}
+.nav-bar a:link, 
+.nav-bar a:visited {
+    padding-bottom: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 90%;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+    
+} 
+
+.nav-bar a:hover, 
+.nav-bar a:active {
+   border-bottom: 2px solid #e67e22;
+} 
+
+
+
+/* -------------------------------------------------------------- */
+/********************** REUSABLE COMPONENTS  **********************/   
+/* -------------------------------------------------------------- */
+
+/* we will reuse these rules with more than one element else */
+
+
+/********************** HEADING  **********************/   
+
+
+h1,h2{
+    word-spacing: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+h1{
+    margin: 0; /* to remove the normalization of top margine */
+    color: #fff;
+    font-size: 250%;
+    
+    font-weight: 300;
+    
+     /* of the original font size  */
+    margin-bottom: 10px;
+}
+
+h2{
+    font-size: 180%;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2:after{
+    content: " ";       /* you make a new element by after pseudo class with " " content */
+    display: block;
+    height: 2px;
+    width: 100px;
+    background-color: #e67e22;
+    margin: 20px auto 0 auto;
+}
+
+h3{
+    font-size: 120%;
+    font-weight: 300;
+    margin: 10px auto 10px auto;
+}
+
+
+
+
+/********************** BUTTONS  **********************/   
+
+
+.btn:link,               /* this is called the property pseudo class that decide when this would be excuted */
+.btn:visited,
+input[type= submit]{     /* link => the normal of the button , visited => after clicked, hover => while hovering, active => while clicking */
+    display: inline-block;
+    padding: 10px 30px;
+    margin-right: 10px;
+    text-decoration: none; 
+    border-radius: 200px; /* you can use in this property any of percentages or pixels */
+    border: 1px solid #e67e22;
+    font-size: 18px;
+    -webkit-transition: backgroun-color 0.2s, color 0.2s;
+    transition: backgroun-color 0.2s, color 0.2s; /* the time is taken for changing properties */
+}
+
+.btn-orange:link,
+.btn-orange:visited,
+input[type= submit]{
+    color: #fff;
+    background-color: #e67e22;
+}
+.btn-full:link,
+.btn-full:visited{
+    color: #e67e22;
+}
+
+.btn-orange:hover,
+.btn-orange:active{
+    background-color: #d35400;
+    border: 1px solid #d35400;
+}
+.btn-full:hover,
+.btn-full:active{
+    background-color: #d35400;
+    border: 1px solid #d35400;
+    color: #fff;
+}
+
+
+
+/* -------------------------------------------------------------- */
+/********************** FEATURES SECTION  *************************/   
+/* -------------------------------------------------------------- */
+
+
+.features-sec{
+    
+/*    width: 80%;*/
+    margin: 5% auto 5% auto;
+    
+}
+
+.long-copy{
+    line-height: 130%;
+    width: 75%;
+    margin: 0 auto 0 auto;
+}
+ 
+
+
+.columns{
+    margin-top: 20px;
+}
+
+.box{
+    padding: 10px;
+}
+.box p{
+    font-size: 90%;
+    line-height: 120%;
+}
+
+.box ion-icon {
+    color: #e67e22;
+    font-size: 300%;
+    
+}
+
+
+
+/* -------------------------------------------------------------- */
+/**********************   favotite meals  *************************/   
+/* -------------------------------------------------------------- */
+
+.favorite-meals{
+    background-color: #000000;
+}
+.imgs img{
+    width: 100%;
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    -webkit-transition: -webkit-transform .6s;
+    transition: -webkit-transform .6s;
+    transition: transform .6s;
+    transition: transform .6s, -webkit-transform .6s;
+    opacity: .6;
+}
+
+.imgs img:hover{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: .85;
+}
+.imgs figure{
+    overflow: hidden;
+    margin: 0;
+    
+}
+.imgs li{
+    display: inline-block;
+    width: 24.7%;
+    margin: 0;
+   
+}
+
+
+/*
+.favorite-meals{
+    background-color: #000;
+}
+.img{
+    width: 25%;
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-left: 0;
+    overflow: hidden;    so we make a figure to put the image in it then as we increase the image size set the figure overflow is                                                       hidden to make zooming out while hovering 
+    opacity: 70%;
+*/
+/*
+}
+.img img{
+    width: 100%;
+    transform: scale(1.15);       this increase the size of the element 15% of it's original size 
+    opacity: 70%;
+    transition: transform 0.5s, opacity 0.5s;
+    
+}
+*/
+
+
+/*
+.favorite-meals img:hover{
+    transform: scale(1);
+    opacity: 100%;
+}
+*/
+
+
+
+/* -------------------------------------------------------------- */
+/**********************   HOW WORKS SECTION  **********************/   
+/* -------------------------------------------------------------- */
+
+.how-works{
+    background-color: #d8d8d8;
+    padding: 60px 0 60px 0;
+} 
+
+.steps-box{
+    margin-top: 40px;
+}
+
+.steps-box:first-child{    /* select all steps-box then select the first child of them */
+    text-align: right;        /* imag is an inline element */
+    padding-right: 3%;
+}
+
+.steps-box:last-child{
+    padding-left: 1%;
+    margin-top: 70px;
+/*    position: relative;*/
+}
+.app-screen{
+    width: 35%;
+}
+
+
+.step{
+    margin-bottom: 40px;
+    position: relative;
+}
+.step div{
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 120%;
+    display: inline-block;
+    margin-right: 20px;
+
+}
+
+.step p{
+    display: inline-block;
+    width: 60%;
+    position: absolute;
+    
+}
+
+.download-icons img{
+    height: 55px;
+    width: auto;
+    margin-top: 60px;
+}
+
+
+/* -------------------------------------------------------------- */
+/**********************   CITIES SECTION  **********************/   
+/* -------------------------------------------------------------- */
+
+
+/*
+my own stly of my own structure
+.cities-sec{
+    margin: 80px 0;
+}
+
+.city-img{
+    width: 100%;
+}
+
+.cities-blocks{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.cities-blocks figcaption{
+    text-transform: uppercase;
+}
+
+.cities-blocks figure{
+    margin-bottom: 20px;
+}
+
+.cities-blocks ion-icon{
+    color: #e67e22;
+    display: inline-block;
+    margin: 0 5px 0 0;
+
+.cities-blocks p {
+    display: inline-block;
+    width: 80%;
+    margin: 0 5px 10px 0;    
+}
+*/
+
+.cities-sec{
+    margin: 80px 0; 
+}
+.cities-sec h3{
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.city-img{
+    width: 100%;
+}
+
+.city-blocks{
+/*
+    width: 75%;
+    margin: 40px auto 0 auto;
+*/
+}
+.info-block{
+    margin-bottom: 10px;
+}
+
+.info-block ion-icon{
+    margin-right: 5%;
+    color: #e67e22;
+    /* secrets to align the icon with the content (vertical align or margin with negative values) */
+/*    margin-bottom: -4px; => this remove 4 px from the space beside the block */
+    vertical-align: middle;
+
+}
+.info-block:first-child{
+    margin-top: 20px;
+}
+.info-block a{
+    color: #e67e22;
+    -webkit-text-decoration:;
+    text-decoration:
+}
+
+/* -------------------------------------------------------------- */
+/********************** customer testimonials ********************/   
+/* -------------------------------------------------------------- */
+
+.customers-testimonials{
+    margin: 70px 0 0 0;
+    height: 600px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(images/back-customers.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(images/back-customers.jpg);
+    background-size: cover; /* to make the image cover the whole of the section background */
+    color: white;
+    background-attachment: fixed; /* anice trick to move over the image */
+    
+}
+
+.customers-testimonials h2{
+    margin-bottom: 40px;
+    margin-top: 60px;
+} 
+
+.rating-block{
+/*
+    width: 80%;
+    margin: 0 auto;
+*/
+    position: relative;
+}
+.customer-rate{
+    padding: 0 1%;
+}
+.customer-rate:before{
+    display: block;
+    content: "\201C";
+    font-size: 500%;
+    position: absolute;
+    top: -40px;
+    
+}
+
+.customer-rate cite{
+    display: block;
+    position: relative;
+    margin-top: 40px;
+}
+
+.customer-rate p{
+    display: inline-block;
+    position: absolute;
+    top: 22px;
+    padding-left: 5%;
+    font-style: 300 italic;
+}
+
+.customer-rate img{
+    border-radius: 50%;
+    height: 80px;
+}
+.customers-testimonials blockquote{
+    line-height: 150%;
+    padding-left: 25px; 
+}
+
+
+/* -------------------------------------------------------------- */
+/********************** pricing plans *****************************/   
+/* -------------------------------------------------------------- */
+
+
+.pricing-plans{
+    background-color: #d8d8d8;
+    padding: 50px 0;
+    
+}
+.plan-box{
+/*
+    width: 90%;
+    margin: 0 auto;
+*/
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 10px 5px #c1c1c1;
+    box-shadow: 10px 10px 5px #c1c1c1;
+    width:
+}
+.plan-box div{
+    padding: 10px;
+}
+
+.pricing-boxes{
+    width: 80%;
+    margin: 0 auto;
+    
+}
+.paln-price{
+    background-color: #eaeaea;
+    border-radius: 10px;
+
+}
+
+.price{
+    font-size: 300%;
+    color: #e67e22;
+    margin-bottom: 12px;
+}
+.price span{
+    font-size: 40%
+}
+
+.paln-features ul{
+    list-style: none;
+}
+.paln-features li{
+    margin: 10px 0;
+}
+.paln-features ion-icon{
+    margin-right: 10px;
+    color: #e67e22;
+}
+
+
+.sign-up{
+    text-align: center;
+}
+
+/* -------------------------------------------------------------- */
+/********************** contact form *****************************/   
+/* -------------------------------------------------------------- */
+
+
+.submit-sec{
+    margin-top: 50px
+}
+.submit-sec h2{
+    margin-bottom: 35px;
+}
+
+
+
+input[type="text"],
+input[type="email"],
+select,
+textarea{
+    width: 60%;
+    height: 35px;
+    border-radius: 5px;
+    border: 2px solid #e5e5e5;
+}
+input[type="checkbox"]{
+    margin-right: 20px;
+}
+
+
+textarea{
+    height: 100px;
+}
+label{
+    padding-left: 45%
+}
+
+*:focus{        /* this to disable the focus feature in  the browser */
+    outline: none;
+}
+
+
+/* -------------------------------------------------------------- */
+/********************** footer section ****************************/   
+/* -------------------------------------------------------------- */
+
+.footer-sec{
+    background-color: #2f2f2f;
+    margin-top: 40px;
+    padding-bottom: 20px
+    
+}
+.footer-container{
+/*    width: 90%;*/
+    height: 200px;
+/*    margin: 0px auto 0 auto;*/
+    padding: 30px 0;
+    color: #a3a3a3;
+    
+}
+
+.footer-container p{
+    text-align: center;
+    padding-top: 60px
+}
+
+.social-nav{
+    text-align: end;
+}
+.social-nav ion-icon,
+#insta-icon{
+    font-size: 150%;
+    color: #a3a3a3;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+#insta-icon:hover{
+    color: #d82144;
+}
+
+.social-nav ion-icon:hover{
+    color: #0e84eb;
+}
+
+
+.social-nav li,
+.footer-nav li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 5%;
+    text-decoration: none;
+}
+.footer-nav a{
+    text-decoration: none;
+    font-size: 110%;
+    color: #a3a3a3;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+.footer-nav a:hover{
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
