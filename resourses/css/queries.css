@@ -1,0 +1,169 @@
+/* let's define some breakpoints here to deal with differnt devices , the media code won't excute before the condition above happen */
+
+
+@media only screen and (max-width: 2000px){
+    .mobile-nav-icon{display: none;}
+}
+/* to deal with small phones : from 1023px to 1200Px; */
+@media only screen and (max-width: 1200px){
+    .hero-text-box{ padding: 0 9%; }
+    
+    .row{ padding: 0 5%;}
+    
+    body{ font-size: 17px; }
+    
+    .pricing-boxes{ padding: 0 0; }
+    
+    .form-sec label{ padding:0 0 0 30%; }
+}
+
+
+
+/* to deal with small laptops and big tablets : from 767px to 1023Px; */
+@media only screen and (max-width: 1024px){
+     body .logo-img{
+        margin: 20px 0 0 3.5%;
+        width: 10%;
+        height: auto;
+    }
+    body .nav-bar{ width: 75%}
+    body .sticky .nav-bar{ width: 75%   }
+    
+    body .nav-bar li{margin: 0 20px 0 0;}
+    .hero-text-box{ padding: 0 30%; }
+    body{ font-size: 15px; }
+    body .long-copy{width: 85%;}
+    body .app-screen{width: 53%;}
+    body .download-icons img{
+        height: 40px;
+        margin-top: 37px;
+    }
+    body .info-block ion-icon{margin-right: 2%;}
+    body .pricing-boxes{ 
+        margin: 0 auto;
+        width: 90%;
+    }
+    body .footer-nav li{
+        margin-right: 4%;
+    
+    }
+    body .footer-nav {
+        width: 65%;
+        
+    }
+    body .social-nav {
+        width: 30%;
+    }
+    body .social-nav li{
+        margin-left: 3%;
+    
+    }
+    body .form-sec{
+        width: 100%;
+        margin: 0;
+    }
+    body input[type="text"],
+    body input[type="email"],
+    body select,
+    body textarea{
+        width: 80%;
+    }
+
+    
+}
+
+
+
+/* to deal with small tablets : from 480px to 767Px; */
+@media only screen and (max-width: 767px){
+    body {font-size: 15px; }
+    body .col{ 
+        width: 100%;        /* to make all colmns above each other like the stack */
+        margin: 0 0 4% 0;    /* to solve the proplem of indented columns */
+    } 
+    
+    body .nav-bar li{
+        display: none;
+        margin-bottom: 10px;
+        font-size: 120%;
+    }
+    
+    body .nav-bar a:hover, 
+    body .nav-bar a:active {
+        border-bottom: 0;
+        
+    } 
+
+    .mobile-nav-icon{
+        display: block;
+        cursor: pointer;
+    }
+    
+    body .long-copy{width: 100%;}
+    body .hero-text-box{ 
+        padding: 0 3%;
+        width: 100%;
+    }
+    body h1{font-size: 200%;}
+    body .imgs li{width: 24.5%;}
+    body .app-screen{width: 35%}
+    body .steps-box:first-child{
+        text-align: center;
+        margin-bottom: 0;
+    }
+    body .steps-box:last-child{margin-top: 20px;}
+    body .step {
+        margin-bottom: 10px ;
+    }  
+    body .step p{
+        width:80%;
+    }
+    body .step div{
+    width: 40px;
+    height: 40px;
+    }
+    body .download-icons{text-align: center;}
+    
+    body .city-block{padding: 0 10%;}
+    body .customers-testimonials{ height: 900px;} 
+    body .pricing-boxes{ 
+        width: 70%;
+    }
+    .form-sec label{
+        padding: 0;
+    }
+    
+    }  
+    
+/* to deal with small phones : from 0px to 480Px; */
+@media only screen and (max-width: 480px){
+    body {font-size: 13px}
+    body .btn:link,               
+    body .btn:visited,
+    body input[type= submit]{
+        padding: 7px 7px;
+        margin-right: 7px;
+        font-size: 17px;
+    }
+    body h1,
+    body h2{font-size: 150%}
+    body .imgs li{width: 24.3%;}
+    body .step div{
+        width: 30px;
+        height: 30px;
+        padding: 4.5px 0 0 0;
+    }
+    body .step {
+        margin-bottom: 20px ;
+    } 
+    body .nav-bar{
+        width: 50%;
+        margin: 25px 30px 0 0;
+    }
+    body .sticky .nav-bar{
+        width: 50%;
+        margin: 25px 30px 0 0;
+    }
+    
+
+}   
